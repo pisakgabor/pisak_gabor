@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+	<!-- Ide jön  a feladat megoldása... -->
+   // 1. rész: A páros és 50-nél nagyobb számokat kiválogatom
+   function kivalogatParosOtven(array) {
+            return array.filter(num => num % 2 === 0 && num > 50);
+        }
+
+    
+
+        // 2. rész: "a" betűk számának meghatározása egy div-ben
+	    function aBetukSzamaDiv() {
+            var divContent = document.querySelector('div').textContent;
+            var aBetuk = divContent.toLowerCase().split('').filter(char => char === 'a').length;
+            return aBetuk;
+        }
+
+
+  
+
+        // 3. rész: Összeadás felírása
+        function osszeadasFeliras(osztaly, elsoOperandus, masodikOperandus) {
+            var num1 = Number(elsoOperandus);
+            var num2 = Number(masodikOperandus);
+            var osszeg = num1 + num2;
+            
+            // Az osztály alapján kiválasztjuk az első elemet
+            var elem = document.querySelector(`.${osztaly}`);
+            
+            // Létrehozzuk az új <p> elemet
+            var pElem = document.createElement('p');
+            pElem.textContent = `${num1} + ${num2} = ${osszeg}`;
+            elem.appendChild(pElem);
+        }
+
+      
+	
+	
+	<!-- Idáig -->
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+<body>
+	<div>
+        agi21bvg8ibvgavgvt3zv8gfzavgzuv9gzuavgzu55vgz
+    </div>
+<hr>
+
+    <div id="testResult">
+		<h2>Tesztek</h2>
+
+    </div>
+
+
+</body>
+</html>
