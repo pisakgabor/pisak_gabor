@@ -6,52 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Unit teszt feladat</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="testBase.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="testBase.js"></script>
 </head>
+
 <body>
-    <!-- Ide jön  a feladat megoldása... -->
     <section id="container" class="container">
-        <section class="row row justify-content-center">
-<section class="col-lg-3"></section>
+        <section class="row justify-content-center">
+            <section class="col-lg-3"></section>
             <section class="col-lg-6">
                 <!-- Rendelési űrlap -->
-                <form action="feldolgoz.php" method="POST" >
+                <form action="feldolgoz.php" method="POST">
                     
-                    <!-- Email beviteli mező -->
-                    <section id="email" class="email" title="email">
-                        <label for="email" class="form-label" >Email cím</label>
-                        <input type="email" id="email" name="email" value="Email cím" class="form-control" required>
-                    </section>
-
-                    <!-- Név beviteli mező -->
-                    <section id="name" class="name" title="name">
+                    <!-- Email input -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="email">
+                    </div>
+                    <!--Name input-->
+                    <div class="form-group">
                         <label for="name" class="form-label">Név</label>
-                        <input type="text" id="name" name="name" value="név" class="form-control" required>
-                    </section>
-
-                    <!-- Rendelés szöveg beviteli mező -->
-                    <section class="text_message" title="text_message">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="név">
+                    </div>
+                    <!--Többsoros input-->
+                    <div class="form-group">
                         <label for="text_message" class="form-label">Rendelés szövege</label>
-                        <textarea id="text_message" class="form-control" name="text_message" rows="4" cols="50" placeholder="Rendelés szövege"></textarea>
-                        
-                    </section>
-
+                        <textarea class="form-control" name="text_message" id="text_message" placeholder="Rendelés szövege"></textarea>
+                    </div>
                     <!-- Küldés gomb -->
-                    <button type="submit" name="ok"  class="btn btn-primary">OK</button>
+                    <button type="submit" name="ok" value="ok" class="btn btn-primary">ELKÜLD</button>
                     
                 </form>
             </section>
             <section class="col-lg-3"></section>
-
         </section>
     </section>
 
-	<!-- Idáig -->
-	<hr>
-<div id="testResult">
-<h2>Tesztek</h2></div>
-<script src="bootstrap_test.js"></script>
+    <hr>
+    <div id="testResult">
+        <h2>Tesztek</h2>
+    </div>
+
+    <script src="bootstrap_test.js"></script>
 </body>
 </html>
